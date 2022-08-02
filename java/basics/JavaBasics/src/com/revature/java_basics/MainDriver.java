@@ -1,6 +1,9 @@
 // package? this keyword defines where the file or class is located
 package com.revature.java_basics;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 public class MainDriver {
     // shortcuts like psvm or main with intelli-sense is key to efficiency
     public static void main(String[] args) { // The green play button takes on compilation and execution of the java program
@@ -106,6 +109,6 @@ public class MainDriver {
         }
         System.out.println(i);
         // System.out.println(hello); hello variable not in scope of the method, it's in the block scope of the for loop
-
+        
     }
 }
