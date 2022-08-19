@@ -19,6 +19,6 @@ public class TrackCoach implements Coachable{
     @Override
     public String getMotivation() {
         // TODO Auto-generated method stub
-        return "Track coach says" + motivationService.provideMotivationalQuote();
+        return "Track coach says " + motivationService.provideMotivationalQuote();
     }
 }
