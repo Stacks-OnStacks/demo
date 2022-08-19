@@ -1,14 +1,16 @@
 package com.revature.spring_intro.models;
 
 import com.revature.spring_intro.services.MotivationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FootballCoach implements Coachable {
 
     private String email;
     private String teamName;
+//    @Autowired // field level injection...please don't do it
     private MotivationService motivationService;
-
-
 
     public FootballCoach() {
         System.out.println("football coach invoked");
@@ -48,6 +50,9 @@ public class FootballCoach implements Coachable {
         return motivationService;
     }
 
+    // we can also have setter based construction for Dependency injection
+    // this is for any dependency that MAY be required and isn't necessary 100% of the time
+    @Autowired
     public void setMotivationService(MotivationService motivationService) {
         this.motivationService = motivationService;
     }

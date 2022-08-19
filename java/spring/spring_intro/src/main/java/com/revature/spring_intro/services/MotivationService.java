@@ -1,5 +1,9 @@
 package com.revature.spring_intro.services;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Service
 public class MotivationService {
 
     public MotivationService() {
