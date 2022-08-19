@@ -1,0 +1,4 @@
+.idea
+target/
+spring_intro.iml
+src/main/resources/hibernate.properties
