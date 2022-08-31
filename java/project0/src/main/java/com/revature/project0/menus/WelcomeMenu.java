@@ -1,2 +1,4 @@
-package com.revature.project0.menus;public class WelcomeMenu {
+package com.revature.project0.menus;
+
+public class WelcomeMenu {
 }

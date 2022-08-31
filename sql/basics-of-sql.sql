@@ -258,8 +258,14 @@ select department_id, avg(salary) from employee e group by department_id order b
 
 
 
+create table bank_user(
+	username serial primary key
+)
 
-
+insert into bank_user 
+values
+(default);
+select * from bank_user where username = 2;
 
 
 

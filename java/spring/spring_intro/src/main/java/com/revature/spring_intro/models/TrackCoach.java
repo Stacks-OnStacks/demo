@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("trackCoach") // the content inside () is redundant as it takes the class name and marks the bean's id as trackCoach regardless
 public class TrackCoach implements Coachable{
 
     private final MotivationService motivationService;

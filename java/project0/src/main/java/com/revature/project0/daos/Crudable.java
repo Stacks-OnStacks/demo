@@ -1,2 +1,4 @@
-package com.revature.project0.daos;public interface Crudable {
+package com.revature.project0.daos;
+
+public interface Crudable {
 }

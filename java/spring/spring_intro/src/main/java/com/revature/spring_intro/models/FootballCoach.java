@@ -2,13 +2,28 @@ package com.revature.spring_intro.models;
 
 import com.revature.spring_intro.services.MotivationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class FootballCoach implements Coachable {
 
+    @Value("${email}")
     private String email;
+
+//    @Value("Spring Sprouts")
+    @Value("${teamName}")
     private String teamName;
+
+//    @Value("#{12 * 3}")
+    @Value("${teamSize}")
+    private int teamSize;
+
+    @Value("${angerLevel}")
+    private long angerLevel;
+
 //    @Autowired // field level injection...please don't do it
     private MotivationService motivationService;
 
@@ -28,6 +43,22 @@ public class FootballCoach implements Coachable {
             return "Sorry no motivation";
         }
         return "Coach tell's you" + motivationService.provideMotivationalQuote();
+    }
+
+    public int getTeamSize() {
+        return teamSize;
+    }
+
+    public void setTeamSize(int teamSize) {
+        this.teamSize = teamSize;
+    }
+
+    public long getAngerLevel() {
+        return angerLevel;
+    }
+
+    public void setAngerLevel(long angerLevel) {
+        this.angerLevel = angerLevel;
     }
 
     public String getEmail() {

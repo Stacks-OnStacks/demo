@@ -1,2 +1,4 @@
-package com.revature.project0.util;public class ConnectionFactory {
+package com.revature.project0.util;
+
+public class ConnectionFactory {
 }

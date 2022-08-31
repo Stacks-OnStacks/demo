@@ -1,2 +1,4 @@
-package com.revature.project0.services;public class BankUserServices {
+package com.revature.project0.services;
+
+public class BankUserServices {
 }

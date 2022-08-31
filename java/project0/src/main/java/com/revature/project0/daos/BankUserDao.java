@@ -1,2 +1,4 @@
-package com.revature.project0.daos;public class BankUserDao {
+package com.revature.project0.daos;
+
+public class BankUserDao {
 }

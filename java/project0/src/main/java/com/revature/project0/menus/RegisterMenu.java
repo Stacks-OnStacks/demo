@@ -1,2 +1,4 @@
-package com.revature.project0.menus;public class RegisterMenu {
+package com.revature.project0.menus;
+
+public class RegisterMenu {
 }
