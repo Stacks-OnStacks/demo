@@ -8,7 +8,7 @@ console.log(stuff); // will print out the above array
 
 console.log(stuff[7]); // hello
 
-stuff[stuff.length + 100] = true;
+// stuff[stuff.length + 100] = true;
 // stuff[stuff.length] = true;
 // stuff[stuff.length] = true;
 // stuff[stuff.length] = true;
