@@ -1,5 +1,10 @@
+import { createContext, useState } from "react";
 import Employee from "../employees/employee";
+import AddBatch from "./addBatch";
+import BatchCounter from "./batchCounter";
 import TrainingTableData from "./trainingTableData";
+
+export const trainingContext = createContext();
 
 export default function TrainingTable() {
     const techArrayOfObject = [
@@ -18,7 +23,15 @@ export default function TrainingTable() {
             batchSize: 20,
             duration: "10w",
         },
+        {
+            trainingName: "Python wtih Automation",
+            batchSize: 25,
+            duration: "10w",
+        },
     ];
+
+    const [trainingArray, setTrainingArray] = useState(techArrayOfObject);
+    console.log(trainingArray);
 
     return (
         <>
@@ -32,8 +45,12 @@ export default function TrainingTable() {
                         <th>Duration</th>
                     </tr>
                 </thead>
-                <TrainingTableData tech={techArrayOfObject}></TrainingTableData>
+                <TrainingTableData tech={trainingArray}></TrainingTableData>
             </table>
+            <trainingContext.Provider value={[trainingArray, setTrainingArray]}>
+                <AddBatch></AddBatch>
+                <BatchCounter></BatchCounter>
+            </trainingContext.Provider>
         </>
     );
 }
